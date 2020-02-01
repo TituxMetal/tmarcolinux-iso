@@ -1,0 +1,433 @@
+#####################################################################
+##                            PACKAGES AVAILABLE
+#####################################################################
+###archiso
+arch-install-scripts
+# b43-fwcutter
+bind-tools
+broadcom-wl
+btrfs-progs
+clonezilla
+crda
+darkhttpd
+ddrescue
+dhclient
+# dhcpcd
+dialog
+diffutils
+dmraid
+dnsmasq
+dnsutils
+dosfstools
+# elinks
+ethtool
+exfat-utils
+f2fs-tools
+fsarchiver
+gnu-netcat
+gpm
+gptfdisk
+# grml-zsh-config
+grub
+hdparm
+ipw2100-fw
+ipw2200-fw
+irssi
+# iwd
+jfsutils
+# lftp
+libatomic_ops
+linux-atm
+linux-firmware
+logrotate
+lsscsi
+lvm2
+man-db
+man-pages
+mc
+mdadm
+mtools
+nano
+ndisc6
+netctl
+nfs-utils
+nilfs-utils
+# nmap
+ntfs-3g
+ntp
+openconnect
+openssh
+openvpn
+partclone
+parted
+partimage
+ppp
+pptpclient
+# For Quodlibet notifications
+python-pyinotify
+refind-efi
+reiserfsprogs
+rp-pppoe
+rsync
+sdparm
+sg3_utils
+smartmontools
+sudo
+tcpdump
+testdisk
+usb_modeswitch
+usbutils
+vi
+vim-minimal
+vpnc
+wget
+wireless-regdb
+wireless_tools
+wpa_supplicant
+wvdial
+xfsprogs
+xl2tpd
+
+###xorg
+xorg-server
+xorg-apps
+xorg-xinit
+# xterm
+
+###video
+xf86-input-libinput
+xf86-video-fbdev
+xf86-video-intel
+xf86-video-nouveau
+xf86-video-qxl
+xf86-video-vesa
+mesa
+
+###base and base-devel
+base
+base-devel
+
+# virtual box or vmware
+virtualbox-guest-modules-arch
+virtualbox-guest-utils
+
+###packages for dual boot
+os-prober
+
+###LUKS encryption
+cryptsetup
+
+###audio
+alsa-firmware
+alsa-plugins
+alsa-lib
+alsa-utils
+gst-libav
+gst-plugins-bad
+gst-plugins-base
+gst-plugins-good
+gst-plugins-ugly
+gstreamer
+libdvdcss
+# pulseaudio
+# pulseaudio-alsa
+# pavucontrol
+volumeicon
+
+###bluetooth
+# blueberry
+# bluez
+# bluez-libs
+# bluez-utils
+# # bluez-firmware
+# pulseaudio-bluetooth
+
+###network
+networkmanager
+network-manager-applet
+networkmanager-dispatcher-ntpd
+systemd-resolvconf
+
+###file management
+gvfs
+gvfs-afc
+gvfs-gphoto2
+gvfs-mtp
+gvfs-nfs
+mtpfs
+udiskie
+udisks2
+xdg-user-dirs
+
+###tumbler
+tumbler
+ffmpegthumbnailer
+freetype2
+libgsf
+libopenraw
+poppler-glib
+poppler-qt5
+
+#########################################################################
+#                  SOFTWARE FROM ARCH LINUX REPOSITORIES
+#########################################################################
+###applications
+firefox
+# gimp
+# gsimplecal
+# imagemagick
+# inkscape
+# libreoffice-fresh
+# lshw
+# meld
+quodlibet
+# nitrogen
+numlockx
+# qbittorrent
+# scrot
+# simplescreenrecorder
+termite
+# vlc
+
+###fonts
+# adobe-source-sans-pro-fonts
+# awesome-terminal-fonts
+# noto-fonts
+# terminus-font
+# ttf-bitstream-vera
+# ttf-dejavu
+ttf-droid
+# ttf-hack
+ttf-inconsolata
+ttf-liberation
+ttf-roboto
+# ttf-ubuntu-font-family
+
+###themes
+# adapta-gtk-theme
+arc-gtk-theme
+# gtk-engine-murrine
+kvantum-qt5
+kvantum-theme-arc
+
+###utilities
+# archiso
+bash-completion
+cronie
+# dmidecode
+# evince
+# expac
+# file-roller
+git
+# gksu
+gnome-keyring
+# gparted
+# hardinfo
+# hddtemp
+htop
+# grsync
+intltool
+iw
+laptop-detect
+lsb-release
+# mesa-demos
+neofetch
+nomacs
+# oh-my-zsh-git
+p7zip
+pcmanfm
+playerctl
+polkit
+polkit-gnome
+# python2-dbus
+# python2-xdg
+qt5ct
+qt5-styleplugins
+reflector
+# redshift
+rofi
+# rxvt-unicode
+speedtest-cli
+# timeshift
+tree
+# ufw
+# gufw
+unace
+unrar
+unzip
+# urxvt-perls
+# wmctrl
+xapps
+xdo
+xdotool
+# xdg-desktop-portal-gtk
+xed
+zenity
+zsh
+zsh-completions
+zsh-syntax-highlighting
+
+###########################################################################
+#                           ARCOLINUX_REPOS
+###########################################################################
+###fonts
+ttf-font-awesome
+ttf-ms-fonts
+
+###icons
+sardi-icons
+# surfn-icons-git
+
+###network
+#b43-firmware
+
+###tools
+mkinitcpio-openswap
+
+###utilities-repo
+# archiso
+# grub-customizer
+# hardcode-fixer-git
+# inxi
+neofetch
+pamac-aur
+# python-pyparted
+# tmux
+trizen
+# urxvt-perls
+# urxvt-resize-font-git
+yad
+yay-bin
+###########################################################################
+#                           ARCOLINUX FOLDER
+###########################################################################
+arcolinux-cron-git
+# arcolinux-fonts-git
+# arcolinux-grub-theme-vimix-git
+arcolinux-keyring
+# arcolinux-kvantum-git
+# arcolinux-lightdm-gtk-greeter
+# arcolinux-lightdm-gtk-greeter-settings
+# arcolinux-local-applications-git
+# arcolinux-local-xfce4-git
+arcolinux-mirrorlist-git
+# arcolinux-neofetch-git
+# arcolinux-qt5-git
+arcolinux-rofi-git
+arcolinux-rofi-themes-git
+arcolinux-root-git
+arcolinux-system-config-git
+arcolinux-termite-themes-git
+arcolinux-zsh-git
+
+###########################################################################
+#                           ARCOLINUX DESKTOP FOLDER
+###########################################################################
+# arcolinux-xfce-git
+
+###########################################################################
+#                           ARCOLINUX CONFIG FOLDER
+###########################################################################
+# arcolinux-config-i3wm-git
+
+###########################################################################
+#                           ARCOLINUX DCONF FOLDER
+###########################################################################
+# arcolinux-i3wm-dconf-git
+
+###########################################################################
+#                                ARCOLINUX CALAMARES
+###########################################################################
+arco-calamares
+arcolinux-system-installation-git
+
+###########################################################################
+#                                CALAMARES DEPENDENCIES
+###########################################################################
+ckbcomp
+upower
+kcoreaddons
+kconfig
+ki18n
+kservice
+kwidgetsaddons
+# kpmcore
+kpmcore-git
+boost-libs
+libpwquality
+squashfs-tools
+plasma-framework
+hwinfo
+qt5-xmlpatterns
+
+###########################################################################
+#                                ARCOLINUX CONFIG CALAMARES
+###########################################################################
+# arcob-calamares-config-i3-git
+
+###########################################################################
+#                                DISPLAY MANAGER
+###########################################################################
+###lightdm
+accountsservice
+lightdm
+lightdm-gtk-greeter
+lightdm-gtk-greeter-settings
+
+###########################################################################
+#                         PICOM OR COMPTON
+###########################################################################
+picom
+
+###########################################################################
+#                                 i3
+###########################################################################
+i3status
+i3blocks
+i3-gaps
+dmenu
+
+###lx-applications
+# lxappearance
+lxappearance-gtk3
+lxrandr
+
+###########################################################################
+#                                XFCE
+###########################################################################
+### xfce4 group content
+exo
+garcon
+thunar
+thunar-volman
+tumbler
+xfce4-appfinder
+xfce4-panel
+xfce4-power-manager
+xfce4-session
+xfce4-settings
+xfce4-terminal
+xfconf
+xfdesktop
+xfwm4
+
+### xfce4-goodies group content
+ristretto
+thunar-archive-plugin
+thunar-media-tags-plugin
+xfce4-notifyd
+xfce4-taskmanager
+
+# xfce4-panel-profiles
+
+###########################################################################
+#                                ISO SPECIFIC
+###########################################################################
+# Test 10
+tmarcolinux-calamares-git
+tmarcolinux-i3wm-config-git
+firefox-i18n-fr
+firefox-ublock-origin
+firefox-dark-reader
+xed
+pcmanfm
