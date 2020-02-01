@@ -1,0 +1,7 @@
+NAME=ArcoLinuxB-i3
+ID=arcolinux
+ID_LIKE="arch"
+VERSION_ID=v20.2.8
+ANSI_COLOR="0;36"
+HOME_URL="https://arcolinux.info"
+SUPPORT_URL="http://arcolinuxforum.com"
