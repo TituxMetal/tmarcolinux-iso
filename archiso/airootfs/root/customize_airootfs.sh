@@ -5,31 +5,31 @@
 count=0
 
 function layout() {
-    count=$[count+1]
-    echo
-    echo "##########################################################"
-    tput setaf 1;echo $count. " Function " $1 "has been installed";tput sgr0
-    echo "##########################################################"
-    echo
+  count=$[count+1]
+  echo
+  echo "##########################################################"
+  tput setaf 1;echo $count. " Function " $1 "has been installed";tput sgr0
+  echo "##########################################################"
+  echo
 }
 
 function deleteXfceWallpapers() {
-    rm -rf /usr/share/backgrounds/xfce
+  rm -rf /usr/share/backgrounds/xfce
 }
 
 function umaskFunc() {
-    set -e -u
-    umask 022
+  set -e -u
+  umask 022
 }
 
-#function localeGenFunc() {
-    # Set locales
-    #sed -i 's/^#\(en_US\.UTF-8\)/\1/' /etc/locale.gen
-    #export LANGUAGE=en_US.UTF-8
-    #export LANG=en_US.UTF-8
-    #export LC_ALL=en_US.UTF-8
-    #locale-gen
-#}
+# function localeGenFunc() {
+#   Set locales
+#   sed -i 's/^#\(en_US\.UTF-8\)/\1/' /etc/locale.gen
+#   export LANGUAGE=en_US.UTF-8
+#   export LANG=en_US.UTF-8
+#   export LC_ALL=en_US.UTF-8
+#   locale-gen
+# }
 
 function setTimeZoneAndClockFunc() {
   # Timezone
@@ -54,9 +54,10 @@ function editOrCreateConfigFilesFunc () {
 }
 
 function configRootUserFunc() {
-    usermod -s /usr/bin/bash root
-    cp -aT /etc/skel/ /root/
-    chmod 750 /root
+  usermod -s /usr/bin/bash root
+  mv /etc/skel/.bashrc-latest /etc/skel/.bashrc
+  cp -aT /etc/skel/ /root/
+  chmod 750 /root
 }
 
 function createLiveUserFunc () {
@@ -73,77 +74,77 @@ function createLiveUserFunc () {
 }
 
 function setDefaultsFunc() {
-    export _EDITOR=nano
-    echo "EDITOR=${_EDITOR}" >> /etc/environment
-    echo "EDITOR=${_EDITOR}" >> /etc/profile
+  export _EDITOR=nano
+  echo "EDITOR=${_EDITOR}" >> /etc/environment
+  echo "EDITOR=${_EDITOR}" >> /etc/profile
 }
 
 function fixHavegedFunc(){
-    systemctl enable haveged
+  systemctl enable haveged
 }
 
 function fixPermissionsFunc() {
-    chmod 750 /etc/sudoers.d
-    chmod 750 /etc/polkit-1/rules.d
-    chgrp polkitd /etc/polkit-1/rules.d
+  chmod 750 /etc/sudoers.d
+  chmod 750 /etc/polkit-1/rules.d
+  chgrp polkitd /etc/polkit-1/rules.d
 }
 
 function enableServicesFunc() {
-	systemctl enable lightdm.service
-	systemctl set-default graphical.target
-	systemctl enable NetworkManager.service
-	systemctl enable virtual-machine-check.service
-	#systemctl enable reflector.service
-	#systemctl enable reflector.timer
-  	# systemctl enable org.cups.cupsd.service
-  	# systemctl enable bluetooth.service
-  	systemctl enable ntpd.service
-  	#systemctl enable smb.service
-  	#systemctl enable nmb.service
-  	#systemctl enable winbind.service
-  	# systemctl enable avahi-daemon.service
-  	# systemctl enable avahi-daemon.socket
-  	#systemctl enable tlp.service
-  	#systemctl enable tlp-sleep.service
-  	#systemctl enable vnstat.service
+  systemctl enable lightdm.service
+  systemctl set-default graphical.target
+  systemctl enable NetworkManager.service
+  systemctl enable virtual-machine-check.service
+  # systemctl enable reflector.service
+  # systemctl enable reflector.timer
+  # systemctl enable org.cups.cupsd.service
+  # systemctl enable bluetooth.service
+  systemctl enable ntpd.service
+  # systemctl enable smb.service
+  # systemctl enable nmb.service
+  # systemctl enable winbind.service
+  # systemctl enable avahi-daemon.service
+  # systemctl enable avahi-daemon.socket
+  # systemctl enable tlp.service
+  # systemctl enable tlp-sleep.service
+  # systemctl enable vnstat.service
 }
 
 function fixWifiFunc() {
-    #https://wiki.archlinux.org/index.php/NetworkManager#Configuring_MAC_Address_Randomization
-    su -c 'echo "" >> /etc/NetworkManager/NetworkManager.conf'
-    su -c 'echo "[device]" >> /etc/NetworkManager/NetworkManager.conf'
-    su -c 'echo "wifi.scan-rand-mac-address=no" >> /etc/NetworkManager/NetworkManager.conf'
+  # https://wiki.archlinux.org/index.php/NetworkManager#Configuring_MAC_Address_Randomization
+  su -c 'echo "" >> /etc/NetworkManager/NetworkManager.conf'
+  su -c 'echo "[device]" >> /etc/NetworkManager/NetworkManager.conf'
+  su -c 'echo "wifi.scan-rand-mac-address=no" >> /etc/NetworkManager/NetworkManager.conf'
 }
 
 function fixHibernateFunc() {
-    sed -i 's/#\(HandleSuspendKey=\)suspend/\1ignore/' /etc/systemd/logind.conf
-    sed -i 's/#\(HandleHibernateKey=\)hibernate/\1ignore/' /etc/systemd/logind.conf
-    sed -i 's/#\(HandleLidSwitch=\)suspend/\1ignore/' /etc/systemd/logind.conf
+  sed -i 's/#\(HandleSuspendKey=\)suspend/\1ignore/' /etc/systemd/logind.conf
+  sed -i 's/#\(HandleHibernateKey=\)hibernate/\1ignore/' /etc/systemd/logind.conf
+  sed -i 's/#\(HandleLidSwitch=\)suspend/\1ignore/' /etc/systemd/logind.conf
 }
 
 function initkeysFunc() {
-    pacman-key --init
-    pacman-key --populate archlinux
-    pacman-key --populate arcolinux
-    pacman-key --keyserver hkps://hkps.pool.sks-keyservers.net:443 -r 1288651EEF84288F
-    # pacman-key --keyserver hkp://pool.sks-keyservers.net:80 -r 1288651EEF84288F
-    pacman-key --lsign-key 74F5DE85A506BF64
-    pacman-key --lsign-key 1288651EEF84288F
-    #sudo pacman-key --refresh-keys
+  pacman-key --init
+  pacman-key --populate archlinux
+  pacman-key --populate arcolinux
+  pacman-key --keyserver hkps://hkps.pool.sks-keyservers.net:443 -r 1288651EEF84288F
+  # pacman-key --keyserver hkp://pool.sks-keyservers.net:80 -r 1288651EEF84288F
+  pacman-key --lsign-key 74F5DE85A506BF64
+  pacman-key --lsign-key 1288651EEF84288F
+  # sudo pacman-key --refresh-keys
 }
 
 function getNewMirrorCleanAndUpgrade() {
-    reflector --threads 50 -l 100 -f 100 --number 20 --sort rate --save /etc/pacman.d/mirrorlist
-    pacman -Sc --noconfirm
-    pacman -Syyu --noconfirm
+  reflector --threads 50 -l 100 -f 100 --number 20 --sort rate --save /etc/pacman.d/mirrorlist
+  pacman -Sc --noconfirm
+  pacman -Syyu --noconfirm
 }
 
 deleteXfceWallpapers
 layout deleteXfceWallpapers
 umaskFunc
 layout umaskFunc
-#localeGenFunc
-#layout localeGenFunc
+# localeGenFunc
+# layout localeGenFunc
 setTimeZoneAndClockFunc
 layout setTimeZoneAndClockFunc
 editOrCreateConfigFilesFunc
