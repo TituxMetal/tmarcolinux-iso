@@ -396,27 +396,27 @@ lxrandr
 #                                XFCE
 ###########################################################################
 ### xfce4 group content
-exo
-garcon
-thunar
-thunar-volman
-tumbler
-xfce4-appfinder
-xfce4-panel
-xfce4-power-manager
-xfce4-session
-xfce4-settings
-xfce4-terminal
-xfconf
-xfdesktop
-xfwm4
+# exo
+# garcon
+# thunar
+# thunar-volman
+# tumbler
+# xfce4-appfinder
+# xfce4-panel
+# xfce4-power-manager
+# xfce4-session
+# xfce4-settings
+# xfce4-terminal
+# xfconf
+# xfdesktop
+# xfwm4
 
 ### xfce4-goodies group content
-ristretto
-thunar-archive-plugin
-thunar-media-tags-plugin
-xfce4-notifyd
-xfce4-taskmanager
+# ristretto
+# thunar-archive-plugin
+# thunar-media-tags-plugin
+# xfce4-notifyd
+# xfce4-taskmanager
 
 # xfce4-panel-profiles
 
