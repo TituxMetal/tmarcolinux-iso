@@ -173,7 +173,7 @@ poppler-qt5
 #########################################################################
 ###applications
 firefox
-# gimp
+gimp
 # gsimplecal
 # imagemagick
 # inkscape
@@ -187,15 +187,15 @@ numlockx
 # scrot
 # simplescreenrecorder
 termite
-# vlc
+vlc
 
 ###fonts
 # adobe-source-sans-pro-fonts
 # awesome-terminal-fonts
-# noto-fonts
+noto-fonts
 # terminus-font
-# ttf-bitstream-vera
-# ttf-dejavu
+ttf-bitstream-vera
+ttf-dejavu
 ttf-droid
 # ttf-hack
 ttf-inconsolata
@@ -206,7 +206,7 @@ ttf-roboto
 ###themes
 # adapta-gtk-theme
 arc-gtk-theme
-# gtk-engine-murrine
+gtk-engine-murrine
 kvantum-qt5
 kvantum-theme-arc
 
@@ -216,12 +216,12 @@ bash-completion
 cronie
 # dmidecode
 # evince
-# expac
+expac
 # file-roller
 git
 # gksu
 gnome-keyring
-# gparted
+gparted
 # hardinfo
 # hddtemp
 htop
@@ -279,7 +279,7 @@ sardi-icons
 # surfn-icons-git
 
 ###network
-#b43-firmware
+# b43-firmware
 
 ###tools
 mkinitcpio-openswap
@@ -313,12 +313,12 @@ arcolinux-keyring
 arcolinux-mirrorlist-git
 # arcolinux-neofetch-git
 # arcolinux-qt5-git
-arcolinux-rofi-git
-arcolinux-rofi-themes-git
-arcolinux-root-git
+# arcolinux-rofi-git
+# arcolinux-rofi-themes-git
+# arcolinux-root-git
 arcolinux-system-config-git
-arcolinux-termite-themes-git
-arcolinux-zsh-git
+# arcolinux-termite-themes-git
+# arcolinux-zsh-git
 
 ###########################################################################
 #                           ARCOLINUX DESKTOP FOLDER
@@ -383,7 +383,7 @@ picom
 #                                 i3
 ###########################################################################
 i3status
-i3blocks
+# i3blocks
 i3-gaps
 dmenu
 
@@ -423,9 +423,9 @@ xfce4-taskmanager
 ###########################################################################
 #                                ISO SPECIFIC
 ###########################################################################
-# Test 10
 tmarcolinux-calamares-git
 tmarcolinux-i3wm-config-git
+tmarcolinux-dotfiles-git
 firefox-i18n-fr
 firefox-ublock-origin
 firefox-dark-reader

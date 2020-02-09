@@ -1,0 +1,7 @@
+NAME=ArchLinux-i3
+ID=archlinux
+ID_LIKE="arch"
+VERSION_ID=v20.2.8
+ANSI_COLOR="0;36"
+HOME_URL="https://github.com/TituxMetal?utf8=%E2%9C%93&tab=repositories&q=tmarcolinux&type=&language="
+SUPPORT_URL="https://github.com/TituxMetal?utf8=%E2%9C%93&tab=repositories&q=tmarcolinux&type=&language="
