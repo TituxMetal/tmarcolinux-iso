@@ -423,7 +423,6 @@ xfce4-taskmanager
 ###########################################################################
 #                                ISO SPECIFIC
 ###########################################################################
-# Test 10
 tmarcolinux-calamares-git
 tmarcolinux-i3wm-config-git
 tmarcolinux-dotfiles-git
