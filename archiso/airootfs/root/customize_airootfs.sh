@@ -22,15 +22,6 @@ function umaskFunc() {
   umask 022
 }
 
-# function localeGenFunc() {
-#   Set locales
-#   sed -i 's/^#\(en_US\.UTF-8\)/\1/' /etc/locale.gen
-#   export LANGUAGE=en_US.UTF-8
-#   export LANG=en_US.UTF-8
-#   export LC_ALL=en_US.UTF-8
-#   locale-gen
-# }
-
 function setTimeZoneAndClockFunc() {
   # Timezone
   ln -sf /usr/share/zoneinfo/Europe/Paris /etc/localtime
@@ -55,22 +46,22 @@ function editOrCreateConfigFilesFunc () {
 
 function configRootUserFunc() {
   usermod -s /usr/bin/bash root
-  mv /etc/skel/.bashrc-latest /etc/skel/.bashrc
+  mv -f /etc/skel/.bashrc-latest /etc/skel/.bashrc
   cp -aT /etc/skel/ /root/
   chmod 750 /root
 }
 
 function createLiveUserFunc () {
-	# add liveuser
-	useradd -m liveuser -u 500 -g users -G "adm,audio,floppy,log,network,rfkill,scanner,storage,optical,power,wheel" -s /bin/bash
-	chown -R liveuser:users /home/liveuser
-	passwd -d liveuser
-	# enable autologin
-	groupadd -r autologin
-	gpasswd -a liveuser autologin
-	groupadd -r nopasswdlogin
-	gpasswd -a liveuser nopasswdlogin
-	echo "The account liveuser with no password has been created"
+  # add liveuser
+  useradd -m liveuser -u 500 -g users -G "adm,audio,floppy,log,network,rfkill,scanner,storage,optical,power,wheel" -s /bin/bash
+  chown -R liveuser:users /home/liveuser
+  passwd -d liveuser
+  # enable autologin
+  groupadd -r autologin
+  gpasswd -a liveuser autologin
+  groupadd -r nopasswdlogin
+  gpasswd -a liveuser nopasswdlogin
+  echo "The account liveuser with no password has been created"
 }
 
 function setDefaultsFunc() {
@@ -94,19 +85,7 @@ function enableServicesFunc() {
   systemctl set-default graphical.target
   systemctl enable NetworkManager.service
   systemctl enable virtual-machine-check.service
-  # systemctl enable reflector.service
-  # systemctl enable reflector.timer
-  # systemctl enable org.cups.cupsd.service
-  # systemctl enable bluetooth.service
   systemctl enable ntpd.service
-  # systemctl enable smb.service
-  # systemctl enable nmb.service
-  # systemctl enable winbind.service
-  # systemctl enable avahi-daemon.service
-  # systemctl enable avahi-daemon.socket
-  # systemctl enable tlp.service
-  # systemctl enable tlp-sleep.service
-  # systemctl enable vnstat.service
 }
 
 function fixWifiFunc() {
@@ -127,10 +106,8 @@ function initkeysFunc() {
   pacman-key --populate archlinux
   pacman-key --populate arcolinux
   pacman-key --keyserver hkps://hkps.pool.sks-keyservers.net:443 -r 1288651EEF84288F
-  # pacman-key --keyserver hkp://pool.sks-keyservers.net:80 -r 1288651EEF84288F
   pacman-key --lsign-key 74F5DE85A506BF64
   pacman-key --lsign-key 1288651EEF84288F
-  # sudo pacman-key --refresh-keys
 }
 
 function getNewMirrorCleanAndUpgrade() {
@@ -143,8 +120,6 @@ deleteXfceWallpapers
 layout deleteXfceWallpapers
 umaskFunc
 layout umaskFunc
-# localeGenFunc
-# layout localeGenFunc
 setTimeZoneAndClockFunc
 layout setTimeZoneAndClockFunc
 editOrCreateConfigFilesFunc
